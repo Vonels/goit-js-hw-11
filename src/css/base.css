@@ -30,3 +30,23 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
+
+.form {
+  width: 360px;
+  margin: 40px auto;
+  padding: 20px 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form input {
+  max-width: 100%;
+}
