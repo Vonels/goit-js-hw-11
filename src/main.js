@@ -49,7 +49,6 @@ async function onSearch(event) {
       message: 'Something went wrong. Please try again later.',
       position: 'topRight',
     });
-    console.error(error);
   } finally {
     form.reset();
   }
