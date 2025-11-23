@@ -80,3 +80,7 @@ button {
 button:hover {
   background-color: #3259db;
 }
+
+.boost {
+  display: none;
+}
