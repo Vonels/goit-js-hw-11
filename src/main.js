@@ -5,7 +5,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.form');
-const loader = document.querySelector('.loader');
+
 
 form.addEventListener('submit', onSearch);
 
@@ -23,7 +23,6 @@ async function onSearch(event) {
   }
 
   clearGallery();
-  showLoader();
 
   try {
     const images = await getImagesByQuery(searchValue);
@@ -44,15 +43,6 @@ async function onSearch(event) {
       position: 'topRight',
     });
   } finally {
-    hideLoader();
     form.reset();
   }
-}
-
-function showLoader() {
-  loader.classList.remove('boost');
-}
-
-function hideLoader() {
-  loader.classList.add('boost');
 }

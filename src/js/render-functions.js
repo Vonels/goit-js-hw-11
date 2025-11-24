@@ -2,6 +2,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
+const loader = document.querySelector('.loader');
 let lightbox;
 
 export function clearGallery() {
@@ -46,4 +47,12 @@ export function createGallery(images) {
   } else {
     lightbox.refresh();
   }
+}
+
+function showLoader() {
+  loader.classList.remove('boost');
+}
+
+function hideLoader() {
+  loader.classList.add('boost');
 }
